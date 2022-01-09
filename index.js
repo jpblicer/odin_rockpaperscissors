@@ -1,29 +1,52 @@
-let rock
-let paper
-let scissors
-
-
-
 let randomNum= Math.floor(Math.random() * 3)
-
-console.log(randomNum)
-
+let computerSelection = computerPlay(randomNum)
+let playerSelection = "Scissors"
 
 function computerPlay(randomNum){
     if(randomNum==0){
-        return console.log("Rock");
+        return "Rock";
     }
     else if(randomNum==1){
-        return console.log("Paper");
+        return "Paper";
     }
 
     else if(randomNum==2){
-        return console.log("Scissors");
+        return "Scissors";
     }
     else{
-        return console.log("Nothing Selected")
+        return "Nothing Selected"
     }
     
 }
 
-computerPlay(randomNum)
+
+
+
+
+function playRound(playerSelection, computerSelection){
+    if (playerSelection === computerSelection){
+        return "Tie"
+    }
+    else if(playerSelection==="Rock" && computerSelection==="Paper"){
+        return "Computer picked Paper. You Lose."
+    }
+    else if(playerSelection==="Rock" && computerSelection==="Scissors"){
+        return "Computer picked Scissors. You Win!"
+    }    
+    else if(playerSelection==="Paper" && computerSelection==="Rock"){
+        return "Computer picked Rock. You Win!"
+    }
+    else if(playerSelection==="Paper" && computerSelection==="Scissors"){
+        return "Computer picked Scissors. You Lose."
+    }  
+    else if(playerSelection==="Scissors" && computerSelection==="Rock"){
+        return "Computer picked Rock. You Lose."
+    }  
+    else if(playerSelection==="Scissors" && computerSelection==="Paper"){
+        return "Computer picked Paper. You Win!"
+    } 
+}
+
+
+
+console.log(playRound(playerSelection, computerSelection))
