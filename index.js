@@ -1,3 +1,9 @@
+
+/* 
+Make playerSelection function caseinsensitive
+Play a 5 round game with scores being kept
+*/
+
 let randomNum= Math.floor(Math.random() * 3)
 let computerSelection = computerPlay(randomNum)
 let playerSelection = "Scissors"
