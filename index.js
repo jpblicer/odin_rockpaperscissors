@@ -4,15 +4,20 @@ let scissors
 
 
 
-function computerPlay(){
-    if(rock){
+let randomNum= Math.floor(Math.random() * 3)
+
+console.log(randomNum)
+
+
+function computerPlay(randomNum){
+    if(randomNum==0){
         return console.log("Rock");
     }
-    else if(paper){
+    else if(randomNum==1){
         return console.log("Paper");
     }
 
-    else if(scissors){
+    else if(randomNum==2){
         return console.log("Scissors");
     }
     else{
@@ -21,4 +26,4 @@ function computerPlay(){
     
 }
 
-computerPlay()
+computerPlay(randomNum)
