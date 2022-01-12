@@ -6,18 +6,18 @@ Play a 5 round game with scores being kept
 
 let randomNum= Math.floor(Math.random() * 3)
 let computerSelection = computerPlay(randomNum)
-let playerSelection = "Scissors"
+let playerSelection = "Scissors".toLowerCase()
 
 function computerPlay(randomNum){
     if(randomNum==0){
-        return "Rock";
+        return "rock";
     }
     else if(randomNum==1){
-        return "Paper";
+        return "paper";
     }
 
     else if(randomNum==2){
-        return "Scissors";
+        return "scissors";
     }
     else{
         return "Nothing Selected"
@@ -33,22 +33,22 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
         return "Tie"
     }
-    else if(playerSelection==="Rock" && computerSelection==="Paper"){
+    else if(playerSelection==="rock" && computerSelection==="paper"){
         return "Computer picked Paper. You Lose."
     }
-    else if(playerSelection==="Rock" && computerSelection==="Scissors"){
+    else if(playerSelection==="rock" && computerSelection==="scissors"){
         return "Computer picked Scissors. You Win!"
     }    
-    else if(playerSelection==="Paper" && computerSelection==="Rock"){
+    else if(playerSelection==="paper" && computerSelection==="rock"){
         return "Computer picked Rock. You Win!"
     }
-    else if(playerSelection==="Paper" && computerSelection==="Scissors"){
+    else if(playerSelection==="paper" && computerSelection==="scissors"){
         return "Computer picked Scissors. You Lose."
     }  
-    else if(playerSelection==="Scissors" && computerSelection==="Rock"){
+    else if(playerSelection==="scissors" && computerSelection==="rock"){
         return "Computer picked Rock. You Lose."
     }  
-    else if(playerSelection==="Scissors" && computerSelection==="Paper"){
+    else if(playerSelection==="scissors" && computerSelection==="paper"){
         return "Computer picked Paper. You Win!"
     } 
 }
