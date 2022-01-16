@@ -1,6 +1,6 @@
 let randomNum= Math.floor(Math.random() * 3)
 let computerSelection = computerPlay(randomNum)
-let playerSelection = "Scissors".toLowerCase()
+
 
 let playerScore = parseInt(0);
 let computerScore = parseInt(0);
@@ -70,14 +70,14 @@ function gameResult(playerScore, computerScore){
     }
 }
 
-console.log(playRound("rock", computerSelection))
-console.log(playRound("paper", computerSelection))
-console.log(playRound("scissors", computerSelection))
-console.log(playRound("scissors", computerSelection))
-console.log(playRound("rock", computerSelection))
+console.log(playRound("rock".toLowerCase(), computerSelection))
+console.log(playRound("paper".toLowerCase(), computerSelection))
+console.log(playRound("scissors".toLowerCase(), computerSelection))
+console.log(playRound("scissors".toLowerCase(), computerSelection))
+console.log(playRound("rock".toLowerCase(), computerSelection))
 
 console.log(playerScore)
 console.log(computerScore)
-console.log(gameResult(playerScore, computerScore))
+console.log(gameResult(playRound))
 
 
