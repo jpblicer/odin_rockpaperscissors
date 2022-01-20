@@ -1,5 +1,66 @@
 let randomNum= Math.floor(Math.random() * 3)
-let computerSelection = computerPlay(randomNum)
+let computerSelection = computerPlay;
+
+function computerPlay(randomNum){
+    if(randomNum===0){
+        return "rock";
+    }
+    else if(randomNum===1){
+        return "paper";
+    }
+    else if(randomNum===2){
+        return "scissors";
+    }
+}
+// wtf how to get computer play and selection to work
+    
+
+let playerScore = 0;
+let computerScore = 0;
+
+let playerSelection = "rock".toLowerCase();
+
+
+
+
+function playRound(playerSelection, computerSelection){
+    if (playerSelection === computerSelection){
+        return "It is a tie"
+    }
+    else if(playerSelection==="rock" && computerSelection==="paper"){
+        computerScore++;
+        return "Computer picked Paper. You Lose."
+    }
+    else if(playerSelection==="rock" && computerSelection==="scissors"){
+        playerScore++;
+        return "Computer picked Scissors. You Win!"
+    }    
+    else if(playerSelection==="paper" && computerSelection==="rock"){
+        playerScore++;
+        return "Computer picked Rock. You Win!"
+    }
+    else if(playerSelection==="paper" && computerSelection==="scissors"){
+        computerScore++;
+        return "Computer picked Scissors. You Lose."
+    }  
+    else if(playerSelection==="scissors" && computerSelection==="rock"){
+        computerScore++;
+        return "Computer picked Rock. You Lose."
+    }  
+    else if(playerSelection==="scissors" && computerSelection==="paper"){
+        playerScore++;
+        return "Computer picked Paper. You Win!"
+    }
+    else{
+        return "what";
+    }
+ }
+    
+console.log(computerSelection(randomNum))
+console.log(playRound(playerSelection, computerSelection))
+
+/*
+
 
 
 let playerScore = parseInt(0);
@@ -7,14 +68,14 @@ let computerScore = parseInt(0);
 
 
 function computerPlay(randomNum){
-    if(randomNum==0){
+    if(randomNum===0){
         return "rock";
     }
-    else if(randomNum==1){
+    else if(randomNum===1){
         return "paper";
     }
 
-    else if(randomNum==2){
+    else if(randomNum===2){
         return "scissors";
     }
     else{
@@ -81,3 +142,4 @@ console.log(computerScore)
 console.log(gameResult(playRound))
 
 
+*/
