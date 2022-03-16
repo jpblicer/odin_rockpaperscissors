@@ -1,26 +1,13 @@
-
-let computerSelection = computerPlay;
+let computerSelection = computerPlay();
+let playerScore = 0;
+let computerScore = 0;
+let playerSelection = "rock";
 
 
 function computerPlay() { 
     const choices = ['rock', 'paper', 'scissors'] 
     return choices[Math.floor(Math.random() * choices.length)];
 } 
-
-
-let playerScore = 0;
-let computerScore = 0;
-
-//let playerSelection = "rock".toLowerCase();
-let playerSelection = prompt("Will you choose Rock, Paper or Scissors?");
-if (playerSelection) {
-    let playerPick = playerSelection.toLowerCase();
-    if (playerPick === "rock" || playerPick === "paper" || playerPick === "scissors"){}
-}   else {
-    alert("invalid selection noob. Git Gud");
-}
-
-
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
@@ -54,27 +41,21 @@ function playRound(playerSelection, computerSelection){
         return "what";
     }
  }
-    
-
-console.log(playRound(playerSelection, computerPlay()))
-console.log(playRound(playerSelection, computerPlay()))
-console.log(playRound(playerSelection, computerPlay()))
-console.log(playRound(playerSelection, computerPlay()))
-console.log(playRound(playerSelection, computerPlay()))
-console.log(playerScore, computerScore)
 
 
 
-function result(playerScore, computerScore){
+ 
+
+function result(){
     if(playerScore > computerScore){
         return "You win!";
     }
     if(playerScore < computerScore){
-        return "Computer wins!"
+        return "Computer wins!";
     }
     else {
-        return "It is a tie!"
+        return "It is a tie!";
     }
 }
-
+console.log(playRound(playerSelection, computerSelection))    
 console.log(result(playerScore, computerScore))
