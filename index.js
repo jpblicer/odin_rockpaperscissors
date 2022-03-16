@@ -1,7 +1,15 @@
 let computerSelection = computerPlay();
 let playerScore = 0;
 let computerScore = 0;
-let playerSelection = "rock";
+
+
+
+
+
+/*THIS PART NEEDS WORK
+let playerSelection = addEventListener("e")
+*/
+
 
 
 function computerPlay() { 
@@ -57,5 +65,6 @@ function result(){
         return "It is a tie!";
     }
 }
+
 console.log(playRound(playerSelection, computerSelection))    
 console.log(result(playerScore, computerScore))
